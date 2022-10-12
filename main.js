@@ -37,6 +37,19 @@ function marry(person1, person2){
   }
 }
 
+function divorce(person1, person2){
+    if (person1.married === true || person2.married === true){
+      person1.married = false;
+      person2.married = false;
+      delete person1.spouseName;
+      delete person2.spouseName;
+  }
+}
+
+
+
+
+
 // Our code here. Don't touch!
 if (typeof getFirstName === 'undefined') {
   getFirstName = undefined
